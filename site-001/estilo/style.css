@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=The+Nautigal&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&family=The+Nautigal&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --cor01: #8a584e;
+    --cor02: #f3d2cb70;
+    --cor03: #F3D2C9;
+    --cor04: #D76A51;
+    --cor05: #4B1609;
+    --font001: 'Dancing Script', cursive;;
+    --font002: 'Roboto', sans-serif;;
+    --font003: 'The Nautigal', cursive;;
+}
+
+body {
+    background-image: url(../imagem/ref.webp);
+    background-position: left top;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.416);
+}
+
+section {
+    padding: 50px;
+    font-size: 1.2em;
+    line-height: 2.7em;
+    height: 400px;
+}
+
+section.img01 {
+
+}
+
+h1.conteudo {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: var(--font001);
+    font-size: 2em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor05), transparent);
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.529);
+}
+
+header {
+    min-height: 200px;
+    background-image: linear-gradient(to bottom, var(--cor01), transparent);
+    text-align: center;
+}
+
+header h1 {
+font-family: var(--font003);
+font-weight: normal;
+font-size: 6em;
+padding-top: 50px;
+color: white;
+}
+
+header p {
+    color: white;
+}
+
+div {
+    text-align: center;
+}
+
+footer {
+    display: inline-block;
+    margin-top: 50px;
+    min-height: 50px;
+}
+
+footer p, a {
+    padding-top: 6%;
+    color: white;
+}
+
+footer p {
+    padding-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
