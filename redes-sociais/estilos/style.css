@@ -43,5 +43,22 @@ iframe#tela {
     left: 53px;
     width: 701px;
     height: 437px;
+}
 
+section#bot img {
+    width: 50px;
+    margin: 20px;
+    opacity: 0.4;
+    transition: 300ms;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+section#bot {
+    text-align: end;
+}
+
+section#bot img:hover {
+    opacity: 1;
+    border: 2px solid transparent;
 }
