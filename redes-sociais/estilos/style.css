@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background-image: linear-gradient(to right ,#00B7FD, #0850C9);
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+section#pc {
+    position: absolute;
+    width: 800px;
+    height: 615px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent url('../imagens/computador.webp');
+    background-repeat: no-repeat;
+}
+
+section #bot {
+
+}
+
+iframe#tela {
+    position: relative;
+    top: 48px;
+    left: 53px;
+    width: 701px;
+    height: 437px;
+
+}
