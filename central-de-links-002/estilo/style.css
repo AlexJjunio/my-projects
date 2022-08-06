@@ -11,21 +11,20 @@ body {
     background-color: white;
 }
 
-div {
+.container {
     position: relative;
     top: -2%;
     margin: auto;
-    width: 1000px;
-    height: 900px;
+    width: 960px;
     background-color: #f3d2c93e;
 }
 
-h1 {
+.menu h1 {
     padding-top: 150px;
     text-align: center;
 }
 
-p {
+.menu p {
     text-align: center;
 }
 
@@ -44,7 +43,7 @@ img:hover {
     box-shadow: 1px 1px 1px #6b210e23;
 }
 
-section {
+section.container-item {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
