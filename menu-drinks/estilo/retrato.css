@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.sub-titulo {
+    flex: 0;
+}
