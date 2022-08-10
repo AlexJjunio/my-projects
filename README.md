@@ -11,7 +11,7 @@
 
 <a href="https://alexjjunio.github.io/projetos/redes-sociais/index.html"> redes-sociais
 
-a href="https://alexjjunio.github.io/projetos/tabela-brasileirão/index.html"> tabela-brasileirão
+<a href="https://alexjjunio.github.io/projetos/tabela-brasileirão/index.html"> tabela-brasileirão
 
 
 
