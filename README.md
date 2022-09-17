@@ -15,8 +15,6 @@
 
 <a href="https://alexjjunio.github.io/my-projects/tabela-brasileirao/index.html"> tabela-brasileirão
 
-<a href="https://alexjjunio.github.io/my-projects/tabela-brasileirao/index.html"> tabela-brasileirão
-
 <a href="https://alexjjunio.github.io/my-projects/my-favorite-movies/index.html"> my movies
 
 
