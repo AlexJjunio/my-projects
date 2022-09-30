@@ -37,6 +37,7 @@ footer button {
 .timer {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   color: white;
   font-size: clamp(5rem, 5rem + 8vw , 8.8rem);
@@ -53,11 +54,12 @@ footer button {
 
   background: rgba(66, 211, 255, 0.13);
   border-radius: 9999px;
-  width: clamp(15rem, 15rem + 30vw, 25.8rem);
-  height: clamp(8rem, 10rem + 30vw, 10rem);
+  width: clamp(10rem, 13rem + 30vw, 25.8rem);
+  height: clamp(5rem, 8rem + 3vw, 10rem);
 }
 
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
