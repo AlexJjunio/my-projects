@@ -1,17 +1,23 @@
 
-export function Timer({
+export default function Timer({
   displayMinutes,
   displaySeconds,
-  timerTimeOut,
-  resetControls
+  resetControls,
 }) {
 
-  function resetTimer() {
-    updateTimerDisplay(minutes, 0)
+  let timerTimeOut
+  let minutes = Number(displayMinutes.textContent)
+
+  function updateMinutes(newMinutes) {
+    minutes = newMinutes
+  }
+
+  function reset() {
+    updateDisplay(minutes, 0)
     clearTimeout(timerTimeOut)
   }
   
-  function updateTimerDisplay(minutes, seconds){
+  function updateDisplay(minutes, seconds){
     displayMinutes.textContent = String(minutes).padStart(2, "0")
     displaySeconds.textContent = String(seconds).padStart(2, "0")
   }
@@ -21,7 +27,7 @@ export function Timer({
       let seconds = Number(displaySeconds.textContent)
       let minutes = Number(displayMinutes.textContent)
   
-      updateTimerDisplay(minutes, 0)
+      updateDisplay(minutes, 0)
   
       if(minutes <= 0) {
         resetControls()
@@ -29,20 +35,26 @@ export function Timer({
       }
   
       if(seconds <= 0) {
-        seconds = 20
+        seconds = 2
         --minutes
       }
       
-      updateTimerDisplay(minutes, String(seconds - 1))
+      updateDisplay(minutes, String(seconds - 1))
   
       countDown()
     }, 1000)
   }
   
+  function hold() {
+    clearTimeout(timerTimeOut)
+  }
+
   return {
     countDown,
-    resetTimer,
-    updateTimerDisplay,
+    reset,
+    updateDisplay,
+    updateMinutes,
+    hold
   }
 
 }
