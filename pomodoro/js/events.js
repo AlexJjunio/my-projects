@@ -42,14 +42,14 @@ export default function({timer, controls, sound}) {
     soundOn.addEventListener('click', function () {
       soundOn.classList.add('hide')
       soundOff.classList.remove('hide')
-      sound.bgAudio.play()
+      sound.bgAudio.pause()
     })
-  
-
+    
+    
     soundOff.addEventListener('click', function () {
       soundOff.classList.add('hide')
       soundOn.classList.remove('hide')
-      sound.bgAudio.pause()
+      sound.bgAudio.play()
     })
 
 }
