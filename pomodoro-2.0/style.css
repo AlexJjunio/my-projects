@@ -10,6 +10,10 @@
   font-size: 62.5%;
 }
 
+.hide {
+  display: none;
+}
+
 body {
   height: 100vh;
   
@@ -54,6 +58,7 @@ body {
 .controls button {
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 /* sounds config */
