@@ -6,18 +6,29 @@ let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
 
 buttonPlay.addEventListener('click', function() {
-  timerTimeOut()
+  countDown()
 })
 
-function timerTimeOut() {
-  setTimeout(function countDown() {
+function countDown() {
+  setTimeout(function(){
     let seconds = Number(secondsDisplay.textContent)
-    
+    let minutes = Number(minutesDisplay.textContent)
+
     if(seconds <= 0) {
-      seconds = 60
+      seconds = 10
+      minutes--
+    } else {
       seconds--
-      console.log(seconds)
     }
+    
+    secondsDisplay.textContent = String(seconds).padStart(2, "0")
+    
+    if(seconds == 0 && minutes == 0) {
+      return
+    }
+
+    minutesDisplay.textContent = String(minutes).padStart(2, "0")
     countDown()
   }, 1000)
+  
 }
