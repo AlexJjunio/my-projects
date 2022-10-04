@@ -15,10 +15,10 @@ let fireplaceSoundsButton = document.querySelector('.fireplaceSoundsButton')
 let coffeShopSoundsButton = document.querySelector('.coffeShopSoundsButton')
 
 //adding app sounds 
-const rainSounds = new Audio("../sounds/rain.wav")
-const forestSounds = new Audio("../sounds/florest.wav")
-const coffeShopSounds = new Audio("../sounds/coffeshop.wav")
-const fireplaceSounds = new Audio("../sounds/fireplace.wav")
+const rainSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/rain.wav")
+const forestSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/florest.wav")
+const coffeShopSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/coffeshop.wav")
+const fireplaceSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/fireplace.wav")
 
 fireplaceSoundsButton.addEventListener('click', function() {
   fireplaceSounds.play()
