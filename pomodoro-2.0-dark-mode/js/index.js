@@ -13,6 +13,23 @@ let forestSoundsButton = document.querySelector('.forestSoundsButton')
 let rainSoundsButton = document.querySelector('.rainSoundsButton')
 let fireplaceSoundsButton = document.querySelector('.fireplaceSoundsButton')
 let coffeShopSoundsButton = document.querySelector('.coffeShopSoundsButton')
+let sunButton = document.querySelector('.sun')
+let moonButton = document.querySelector('.moon')
+
+
+//dark mode
+  
+moonButton.addEventListener('click', function() {
+  moonButton.classList.add('hide')
+  sunButton.classList.remove('hide')
+})
+
+sunButton.addEventListener('click', function() {
+  moonButton.classList.remove('hide')
+  sunButton.classList.add('hide')
+})
+
+//--------------------
 
 //adding app sounds 
 const rainSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/rain.wav?raw=true")
