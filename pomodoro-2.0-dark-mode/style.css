@@ -41,7 +41,6 @@
 body {
   background-color: var(--body-bg);
   color: var(--body-color);
-
   height: 100vh;
   position: relative;
   display: grid;
@@ -51,7 +50,6 @@ body {
   justify-self: center;
   align-self: center;
   margin-top: -17rem;
-  position: relative;
   display: grid;
   gap: 10.2rem;
   height: 33.6rem;
