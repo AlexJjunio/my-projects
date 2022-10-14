@@ -18,15 +18,17 @@ let moonButton = document.querySelector('.moon')
 
 
 //dark mode
-  
+const html = document.querySelector("html")
 moonButton.addEventListener('click', function() {
   moonButton.classList.add('hide')
   sunButton.classList.remove('hide')
+  html.classList.add("dark-mode")
 })
 
 sunButton.addEventListener('click', function() {
   moonButton.classList.remove('hide')
   sunButton.classList.add('hide')
+  html.classList.remove("dark-mode")
 })
 
 //--------------------
