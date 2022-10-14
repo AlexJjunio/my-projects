@@ -51,7 +51,7 @@ body {
   justify-self: center;
   align-self: center;
   margin-top: -17rem;
-
+  position: relative;
   display: grid;
   gap: 10.2rem;
   height: 33.6rem;
@@ -133,8 +133,8 @@ body {
 
 .alternator {
   position: absolute;
-  right: 12.0rem;
-  top: 12.0rem;
+  right: 3rem;
+  top: 3rem;
 }
 
 .alternator button {
