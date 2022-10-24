@@ -142,3 +142,50 @@ body {
 }
 
 
+
+
+
+
+
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  background-color: var(--fc-timer);
+  outline: none;
+
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.8rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--fc-timer);
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--fc-timer);
+  border: none;
+}
+
+input[type=range]::-ms-range-thumb {
+  width: 25px;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--fc-timer);
+  border: none;
+}
