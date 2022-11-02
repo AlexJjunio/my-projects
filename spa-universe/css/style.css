@@ -12,13 +12,49 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+nav {
+  /* border: 1px solid blue; */
+
+  padding: 40px 0 40px 72px;
+
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #C4C4CC;
+
+  text-decoration: none;
+
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  font-weight: 700;
+
+}
+
+
+
+
+
+
+
+/* HOME */
+
 .bg-home {
   width: 100%;
   height: 100%;
 
   background: url(../imgs/mountains-universe-1\ 1\ \(2\).png);
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 
   position: absolute;
   top: 0;
@@ -32,11 +68,12 @@ body {
   align-items: center;
   justify-content: center;
 
-  height: 40vh;
+  height: 60vh;
+
   gap: 24px;
 
   color: var(--primary-color);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 #home h1 {
@@ -45,12 +82,11 @@ body {
 }
 
 #home button {
-
-
   padding: 12px 32px;
 
   background: transparent;
 
+  border-radius: 5px;
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
 
@@ -59,6 +95,14 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 14px;
+
+  transition: .3s;
+}
+
+#home button:hover {
+  background: #fff;
+  color: #02799D;
+
 }
 
 
@@ -70,77 +114,85 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* UNIVERSO */
 
 .universe-bg {
   width: 100%;
   height: 100%;
 
   background: url(../imgs/mountains-universe-2.png);
-  background-size: 100vw 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
+  background-position: center;
 
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 #universe {
-  color: white;
+  margin-left: 102px;
+
+  color: #C4C4CC;
+  width: 650px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-top: 63px;
 }
+
+#universe h1 {
+  font-weight: 700;
+}
+
+#universe p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+
+
+
 
 .explorer-bg {
   width: 100%;
   height: 100%;
 
   background: url(../imgs/mountains-universe-3.png);
-  background-size: 100vw 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
+  background-position: center;
 
+
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 #explorer {
-  color: white;
+  margin-left: 102px;
+
+  color: #fff;
+  
+  margin-top: 63px;
+  width: 648px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#explorer h1 {
+  font-weight: 700;
+}
+
+#explorer p{
+  color: #C4C4CC;
+  font-weight: 400;
+  line-height: 160%;
 }
