@@ -27,7 +27,7 @@
   
 <a href="https://alexjjunio.github.io/my-projects/tabela-brasileirao/index.html"> tabela brasileirao
 
-<a href="https://alexjjunio.github.io/my-projects/spa-universe/index.html"> spa universe
+<a href="https://alexjjunio.github.io/my-projects/spa-universe/index.html"> spa-universe
 
   
 
