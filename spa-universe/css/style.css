@@ -41,6 +41,22 @@ nav {
 
 }
 
+#burguer {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+#burguer:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
 
 
 
@@ -62,8 +78,6 @@ nav {
   top: 0;
   left: 0;
   z-index: -1;
-
-  
 }
 
 #home {
@@ -78,6 +92,7 @@ nav {
 
   color: var(--primary-color);
   /* border: 1px solid red; */
+  
 }
 
 #home h1 {
@@ -85,7 +100,7 @@ nav {
   font-weight: 700;
 }
 
-#home button {
+#home .button {
   padding: 12px 32px;
 
   background: transparent;
@@ -101,9 +116,13 @@ nav {
   font-size: 14px;
 
   transition: .3s;
+
+  text-decoration: none;
+  
+  text-transform: uppercase;
 }
 
-#home button:hover {
+#home .button:hover {
   background: #fff;
   color: #02799D;
 
@@ -133,13 +152,15 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+
 }
 
 #universe {
-  margin-left: 102px;
+  padding-left: 102px;
 
   color: #C4C4CC;
-  width: 650px;
+  width: 100%;
+  max-width: 648px;
 
   display: flex;
   flex-direction: column;
@@ -179,12 +200,14 @@ nav {
 }
 
 #explorer {
-  margin-left: 102px;
-
+  padding-left: 102px;
+  padding-right: 10px;
+  
   color: #fff;
   
   margin-top: 63px;
-  width: 648px;
+  width: 100%;
+  max-width: 648px;
 
   display: flex;
   flex-direction: column;
@@ -208,7 +231,7 @@ nav {
   animation: blinkdo 2s .3s backwards;
 }
 
-#home button {
+#home .button {
   animation: fromTop 1s .3s backwards;
 }
 
@@ -261,3 +284,58 @@ nav {
     opacity: 1;
   }
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 550px) {
+  #burguer {
+    display: none;
+  }
+
+  menu {
+    display: block;
+  }
+
+  menu > ul > li {
+    display: inline-block;
+  }
+
+}
+
+
+
+@media (max-width: 550px) {
+  nav {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li:nth-child(1) {
+    display: none;
+  }
+
+  #explorer {
+    padding: 0;
+    margin: 0;
+    margin-top: 145px;
+  }
+  #universe {
+    padding: 0;
+    margin: 0;
+    margin-top: 145px;
+  }
+
+  #home {
+    padding: 0;
+    margin: 0;
+  }
+  #home h1 {
+    font-size: 30px;
+  }
+}
+
