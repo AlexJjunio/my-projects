@@ -157,6 +157,8 @@ nav {
 
 #universe {
   padding-left: 102px;
+  padding-right: 15px;
+
 
   color: #C4C4CC;
   width: 100%;
@@ -201,7 +203,7 @@ nav {
 
 #explorer {
   padding-left: 102px;
-  padding-right: 10px;
+  padding-right: 15px;
   
   color: #fff;
   
@@ -305,6 +307,10 @@ nav {
 
 
 @media (max-width: 550px) {
+  menu {
+   display: none; 
+  }
+
   nav {
     padding: 0;
     margin: 0;
@@ -323,11 +329,13 @@ nav {
     padding: 0;
     margin: 0;
     margin-top: 145px;
+    padding: 15px;
   }
   #universe {
     padding: 0;
     margin: 0;
     margin-top: 145px;
+    padding: 15px;
   }
 
   #home {
