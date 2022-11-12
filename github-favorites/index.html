@@ -12,11 +12,11 @@
 <body>
   <div id="app">
     <header>
-      <h1>GitFav</h1>
-      <div class="GithubSearch">
+      <h1>Github Favorites</h1>
+      <div class="search">
         <label class="sr-only" for="input-search">Usuário do Github</label>
         <input placeholder="Usuário do Github" type="text" id="input-search">
-        <button>&plus;</button>
+        <button class="button-plus">&plus;</button>
       </div>
     </header>
     
@@ -24,10 +24,10 @@
 
       <thead>
         <tr>
-          <td>Usuário</td>
-          <td>Repositories</td>
-          <td>Fllowers</td>
-          <td>#</td>
+          <th>Usuário</th>
+          <th>Repositórios</th>
+          <th>Seguidores</th>
+          <th></th>
         </tr>
       </thead>
 
@@ -47,7 +47,7 @@
             9589
           </td>
           <td>
-            <button>&times;</button>
+            <button class="remove">&times;</button>
           </td>
         </tr>
 
@@ -66,7 +66,7 @@
             9589
           </td>
           <td>
-            <button>&times;</button>
+            <button class="remove">&times;</button>
           </td>
         </tr>
       </tbody>
