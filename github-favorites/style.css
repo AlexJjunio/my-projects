@@ -26,6 +26,7 @@ body  {
 
 /* .sr-only é uma classe flexivel, que pode ser adicionada em diversos contexto para fazer com que o conteúdo desapareça, o usúario não irá ver o conteúdo mas o leitor de telas sim. */
 
+
 .sr-only {
   position: absolute;
   width: 1px;
