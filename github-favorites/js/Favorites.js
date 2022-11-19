@@ -1,17 +1,5 @@
-export class GithubUser {
-  static search(username) {
-    const endpoint = `https://api.github.com/users/${username}`
+import { GithubUser } from "./GithubUser.js"
 
-    return fetch(endpoint)
-    .then(data => data.json())
-    .then(({login, name, public_repos, followers}) => ({
-      login,
-      name,
-      public_repos,
-      followers
-    }))
-  }
-}
 
 export class Favorites {
   constructor(root) {
@@ -97,6 +85,7 @@ export class FavoritesView extends Favorites {
       row.querySelector('.user span').textContent = `${user.login}`
       row.querySelector('.repositories').textContent = `${user.public_repos}`
       row.querySelector('.followers').textContent = `${user.followers}`
+      row.querySelector('.user a').href = `https://github.com/${user.login}`
 
       row.querySelector('.remove').onclick = () => {
         const isOk = confirm('Tem certeza que deseja exluir essa linha?')
