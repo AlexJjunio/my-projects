@@ -5,8 +5,6 @@ export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
     this.load()
-
-    // GithubUser.search('diego3g').then(user => console.log(user))
   }
 
   load() {
