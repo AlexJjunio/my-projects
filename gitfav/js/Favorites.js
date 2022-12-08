@@ -1,27 +1,43 @@
+export class GithubUser {
+  static search(username) {
+    const endpoint = `https://api.github.com/users/${username}`
+    return fetch(endpoint)
+    .then(data => data.json())
+    .then(
+      ({login, name, public_repos, followers}) => ({
+        login,
+        name,
+        public_repos,
+        followers
+      })
+    )
+  }
+}
+
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
     this.load()
   }
 
-  load() {
+  async add(username) {
+    try {
+      const user = await GithubUser.search(username)
 
-    this.entries = [
-      {
-        login: 'alexjjunio',
-        name: 'Alex Junio',
-        public_repos: '76',
-        followers: '1200'
-      },
-      
-      {
-        login: 'maykbrito',
-        name: 'Mayk Brito',
-        public_repos: '86',
-        followers: '1300'
+      this.entries = [user, ...this.entries]
+      this.update()
+
+      if(user.login === undefined) {
+        throw new Error('Usuário não existe')
       }
-    ]
 
+    } catch(error) {
+      alert(error.message)
+    }
+  }
+
+  load() {
+    this.entries = localStorage.getItem('@github-favorites:') || []
   }
 
   delete(user) {
@@ -35,10 +51,21 @@ export class Favorites {
 export class FavoritesView extends Favorites {
   constructor(root) {
     super(root)
+
     this.tbody = this.root.querySelector('table tbody')
+
     this.update()
+    this.onadd()
   }
   
+  onadd() {
+    const addButton = this.root.querySelector('.search button')
+    addButton.onclick = () => {
+      const { value } = this.root.querySelector('.search input')
+      this.add(value)
+    }
+  }
+
   update() {
     this.removeAllTr()
     
@@ -64,8 +91,6 @@ export class FavoritesView extends Favorites {
 
       this.tbody.append(row)
     })
-
-
   }
 
   removeAllTr() {
