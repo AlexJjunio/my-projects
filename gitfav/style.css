@@ -22,10 +22,12 @@ body {
 }
 
 #page {
-  width: 1120px;
+  max-width: 1120px;
 
   margin: 105px auto 0;
   text-align: center;
+
+  padding: 2rem;
 }
 
 header {
@@ -37,14 +39,36 @@ header {
   margin-bottom: 87px;
 }
 
+@media (max-width: 855px) {
+  header h1 {
+    display: none;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .search button {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
 .search {
-  display: flex;
+  /* display: flex; */
 
   gap: 10px;
+  min-width: 300px;
 }
 
 .search input {
-  width: 462px;
+
+  width: 100%;
   padding: 16px;
 
   border-radius: 5px;
@@ -56,6 +80,10 @@ header {
 } 
 
 .search button {
+  width: 100%;
+
+  justify-content: center;
+
   padding: 12px 32px;
   text-transform: uppercase;
 
@@ -112,6 +140,10 @@ header {
   border: 1px solid red;
   width: 100%;
   background-color: white;
+}
+
+#container-table {
+  overflow-x: auto;
 }
 
 table * {

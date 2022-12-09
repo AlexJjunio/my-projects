@@ -12,9 +12,10 @@
   <script defer type="module" src="js/main.js"></script>
 </head>
 <body>
+  
   <div id="page">
     <header>
-      <h1>{&Star;} GitFav</h1>
+      <h1>&star; GitFav</h1>
       <div class="search">
         <label class="sr-only" for="input-search">Digite o Github username que quer favoritar</label>
         <input placeholder="Digite o Github username que quer favoritar" id="input-search" type="text">
@@ -24,18 +25,20 @@
            Favoritar</button>
       </div>
     </header>
-    <table>
-      <thead>
-        <tr>
-          <th>User</th>
-          <th>Repositories</th>
-          <th>Followers</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
+    <div id="container-table">
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Repositories</th>
+            <th>Followers</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
   </div>
 </body>
 </html>
