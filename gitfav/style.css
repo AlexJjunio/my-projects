@@ -39,7 +39,7 @@ header {
   margin-bottom: 87px;
 }
 
-@media (max-width: 855px) {
+@media (max-width: 550px) {
   header h1 {
     display: none;
   }
@@ -123,10 +123,6 @@ header {
   border-width: 0;
 }
 
-.hide {
-
-}
-
 .empty {
   width: 1120px;
   height: 624px;
@@ -144,6 +140,18 @@ header {
 
 #container-table {
   overflow-x: auto;
+
+  height: 583px;
+  background: #06181C;
+  border-radius: 12px;
+
+  border: 1px solid #4A808C;
+}
+
+#container-table.active {
+  background-image: url(./assets/nofavorites.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 table * {
@@ -157,12 +165,17 @@ table {
   margin: auto;
   width: 100%;
 
-  /* border-collapse: collapse; */
-  border: 1px solid #4A808C;
+  border-collapse: collapse;
   border-radius: 12px;
 
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 
+  min-width: 770px;
+}
+
+
+table tbody tr {
+  border-bottom: 1px solid #4A808C;
 }
 
 table thead tr th {
@@ -219,4 +232,30 @@ table .remove {
   width: 56px;
   height: 56px;
   border-radius: 50%;
+}
+
+/*SCROLL*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4A808C;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-button:start:decrement {
+  height: 50px;
+  display: block;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button:end:increment {
+  height: 10px;
 }

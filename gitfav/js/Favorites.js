@@ -1,18 +1,6 @@
-export class GithubUser {
-  static search(username) {
-    const endpoint = `https://api.github.com/users/${username}`
-    return fetch(endpoint)
-    .then(data => data.json())
-    .then(
-      ({login, name, public_repos, followers}) => ({
-        login,
-        name,
-        public_repos,
-        followers
-      })
-    )
-  }
-}
+import { GithubUser } from "./GithubUser.js"
+
+GithubUser
 
 export class Favorites {
   constructor(root) {
@@ -27,7 +15,7 @@ export class Favorites {
   async add(username) {
     try {
       
-      const userExists = this.entries.find(entry => entry.login === username)
+      const userExists = this.entries.find(entry => entry.login.toUpperCase() === username.toUpperCase())
 
       console.dir(userExists)
 
@@ -37,12 +25,12 @@ export class Favorites {
 
       const user = await GithubUser.search(username)
 
-      this.entries = [user, ...this.entries]
       
       if(user.login === undefined) {
         throw new Error('Usuário não existe')
       }
       
+      this.entries = [user, ...this.entries]
       this.update()
       this.save()
       
@@ -83,6 +71,13 @@ export class FavoritesView extends Favorites {
   }
 
   update() {
+    const tbody = document.querySelector('#container-table')
+    if(this.entries.length === 0) {
+      tbody.classList.add('active')
+    } else {
+      tbody.classList.remove('active')
+    }
+
     this.removeAllTr()
     
     
