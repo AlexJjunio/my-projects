@@ -41,46 +41,29 @@ const coffeShopSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw
 const fireplaceSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/fireplace.wav?raw=true")
 
 let isPlaying = false;
+var buttons = [fireplaceSoundsButton, coffeShopSoundsButton, rainSoundsButton, forestSoundsButton];
+var sounds = [fireplaceSounds, coffeShopSounds, rainSounds, forestSounds];
+var currentSound = null;
 
-fireplaceSoundsButton.addEventListener('click', function() {
-  if (isPlaying) {
-    fireplaceSounds.pause();
-    isPlaying = false;
-  } else {
-    fireplaceSounds.play();
-    isPlaying = true;
-  }
-});
-
-coffeShopSoundsButton.addEventListener('click', function() {
-  if (isPlaying) {
-    fireplaceSounds.pause();
-    isPlaying = false;
-  } else {
-    fireplaceSounds.play();
-    isPlaying = true;
-  }
-})
-
-rainSoundsButton.addEventListener('click', function() {
-  if (isPlaying) {
-    fireplaceSounds.pause();
-    isPlaying = false;
-  } else {
-    fireplaceSounds.play();
-    isPlaying = true;
-  }
-})
-
-forestSoundsButton.addEventListener('click', function() {
-  if (isPlaying) {
-    fireplaceSounds.pause();
-    isPlaying = false;
-  } else {
-    fireplaceSounds.play();
-    isPlaying = true;
-  }
-})
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function(index) {
+    return function() {
+      if (isPlaying && currentSound === sounds[index]) {
+        currentSound.pause();
+        isPlaying = false;
+        buttons[index].style.backgroundColor = "";
+      } else {
+        if (isPlaying) {
+          currentSound.pause();
+        }
+        currentSound = sounds[index];
+        currentSound.play();
+        isPlaying = true;
+        buttons[index].style.backgroundColor = "#02799D";
+      }
+    }
+  }(i));
+}
 
 // -------------------------------------------
 
