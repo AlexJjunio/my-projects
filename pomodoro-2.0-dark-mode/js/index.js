@@ -3,6 +3,7 @@ const buttonPause = document.querySelector('.pause')
 const buttonStop = document.querySelector('.stop')
 const buttonIncrease = document.querySelector('.increase')
 const buttonDecrease = document.querySelector('.decrease')
+
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
 const initialSeconds = secondsDisplay.textContent;
@@ -39,31 +40,46 @@ const forestSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/ma
 const coffeShopSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/coffeshop.wav?raw=true")
 const fireplaceSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/fireplace.wav?raw=true")
 
+let isPlaying = false;
+
 fireplaceSoundsButton.addEventListener('click', function() {
-  fireplaceSounds.play()
-  coffeShopSounds.pause()
-  rainSounds.pause()
-  forestSounds.pause()
-})
+  if (isPlaying) {
+    fireplaceSounds.pause();
+    isPlaying = false;
+  } else {
+    fireplaceSounds.play();
+    isPlaying = true;
+  }
+});
 
 coffeShopSoundsButton.addEventListener('click', function() {
-  fireplaceSounds.pause()
-  coffeShopSounds.play()
-  rainSounds.pause()
-  forestSounds.pause()
+  if (isPlaying) {
+    fireplaceSounds.pause();
+    isPlaying = false;
+  } else {
+    fireplaceSounds.play();
+    isPlaying = true;
+  }
 })
 
 rainSoundsButton.addEventListener('click', function() {
-  fireplaceSounds.pause()
-  coffeShopSounds.pause()
-  rainSounds.play()
-  forestSounds.pause()
+  if (isPlaying) {
+    fireplaceSounds.pause();
+    isPlaying = false;
+  } else {
+    fireplaceSounds.play();
+    isPlaying = true;
+  }
 })
+
 forestSoundsButton.addEventListener('click', function() {
-  fireplaceSounds.pause()
-  coffeShopSounds.pause()
-  rainSounds.pause()
-  forestSounds.play()
+  if (isPlaying) {
+    fireplaceSounds.pause();
+    isPlaying = false;
+  } else {
+    fireplaceSounds.play();
+    isPlaying = true;
+  }
 })
 
 // -------------------------------------------
@@ -73,10 +89,7 @@ function resetTimer() {
   secondsDisplay.textContent = initialSeconds
 }
 
-function resetControls() {
-  buttonPlay.classList.remove('hide')
-  buttonPause.classList.add('hide')
-}
+
 
 buttonIncrease.addEventListener('mousedown', function(){
   newMinutes = Number(minutesDisplay.textContent) + 1
@@ -108,9 +121,16 @@ buttonDecrease.addEventListener('click', function(){
 })
 
 buttonPlay.addEventListener('click', function() {
+
+  if(minutesDisplay.textContent && secondsDisplay.textContent == 0) {
+    clearTimeout(timerTimeOut)
+    resetTimer()
+  }
     countDown()
     buttonPlay.classList.add('hide')
     buttonPause.classList.remove('hide')
+
+
 })
 
 buttonPause.addEventListener('click', function(){
