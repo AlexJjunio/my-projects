@@ -1,6 +1,9 @@
 export default function Controls({
   playButton,
-  pauseButton
+  pauseButton,
+  stopButton,
+  increaseButton,
+  decreaseButton
 }) {
 
   function play() {
@@ -13,8 +16,14 @@ export default function Controls({
     playButton.classList.remove('hide')
   }
 
+  function reset() {
+    pauseButton.classList.add('hide')
+    playButton.classList.remove('hide')
+  }
+
   return {
     play,
-    pause
+    pause,
+    reset
   }
 }
