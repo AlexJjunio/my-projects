@@ -11,6 +11,7 @@ export default function() {
   const coffeShopSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/coffeshop.wav?raw=true")
 
   const firePlaceSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/fireplace.wav?raw=true")
+  
 
   function pressRainSoundsButton() {
     rainSounds.play()
@@ -37,10 +38,10 @@ export default function() {
   return {
     pressButton,
     timeEnd,
-    pressForestSoundsButton,
-    pressCoffeShopSoundsButton,
-    pressFirePlaceSoundsButton,
-    pressRainSoundsButton
+    rainSounds,
+    forestSounds,
+    coffeShopSounds,
+    firePlaceSounds
   }
 
 }
