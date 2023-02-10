@@ -10,6 +10,8 @@ import {
   decreaseButton,
   displayMinutes,
   displaySeconds,
+  sunButton,
+  moonButton
 
 } from "./elements.js";
 
@@ -19,6 +21,8 @@ const controls = Controls({
   stopButton,
   increaseButton,
   decreaseButton,
+  sunButton,
+  moonButton
 
 })
 

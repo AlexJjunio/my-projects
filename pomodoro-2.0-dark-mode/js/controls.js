@@ -1,9 +1,10 @@
+// import { sunButton } from "./elements"
+
 export default function Controls({
   playButton,
   pauseButton,
-  stopButton,
-  increaseButton,
-  decreaseButton
+  sunButton,
+  moonButton
 }) {
 
   function play() {
@@ -21,9 +22,21 @@ export default function Controls({
     playButton.classList.remove('hide')
   }
 
+  function light() {
+    moonButton.classList.remove('hide')
+    sunButton.classList.add('hide')
+  }
+
+  function night() {
+    moonButton.classList.add('hide')
+    sunButton.classList.remove('hide')
+  }
+
   return {
     play,
     pause,
-    reset
+    reset,
+    light,
+    night
   }
 }

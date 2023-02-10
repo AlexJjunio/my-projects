@@ -6,8 +6,32 @@
   box-sizing: border-box;
 }
 
+.dark-mode:root {
+  font-size: 62.5%;
+  --body-bg: #222;
+  --body-color: #dee2e6;
+  --sounds-button: #899095;
+  --sounds-button-hover: #ec5840;
+  --path-fill: #899095;
+  --path-fill-sounds: #dee2e6;
+}
+
 :root {
-  font-size: 59.5%;
+  font-size: 62.5%;
+  --body-bg: white;
+  --body-color: #222;
+  --sounds-button: #E1E1E6;
+  --sounds-button-hover: #02799D;
+  --path-fill: #222;
+  --path-fill-sounds: black;
+}
+
+.controls svg path {
+  fill: var(--path-fill);
+}
+
+.alternator svg path {
+   fill: var(--path-fill);
 }
 
 .hide {
@@ -15,23 +39,21 @@
 }
 
 body {
+  background-color: var(--body-bg);
+  color: var(--body-color);
   height: 100vh;
-  
+  position: relative;
   display: grid;
-}
-
-body {
-  padding-top: 5.0rem;
 }
 
 #container{
-  /* border: 2px solid red; */
   justify-self: center;
   align-self: center;
   margin-top: -17rem;
-
   display: grid;
   gap: 10.2rem;
+  height: 33.6rem;
+  /* width: 82.1rem; */
 }
 
 @media (min-width: 900px) {
@@ -77,22 +99,85 @@ body {
 
   display: grid;
   grid-template-columns: 13.8rem 13.8rem;
+  justify-self: center;
+  align-self: center;
   gap: 3.2rem;
 }
 
 .sounds button {
   border-radius: 2.4rem;
-  background: #E1E1E6;
+  background: var(--sounds-button);
   transition: .2s;
   cursor: pointer;
   border: none;
+  width: 100%;
+  height: 100%;
+
 }
 
 .sounds button:hover{
-  background: #02799D;
+  background: var(--sounds-button-hover);
+}
+
+.sounds path {
+  fill: var(--path-fill-sounds);
 }
 
 .sounds button:hover path{
-  background: #02799D;
-  fill: white;
+  /* background: #02799D; */
+  fill: var(--path-fill-sounds);
+}
+
+body {
+  position: relative;
+}
+
+.alternator {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+}
+
+.alternator button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* -------------------------- */
+
+.card-container{
+  position: relative;
+}
+
+.slider-container{
+  z-index: 1;
+  position: absolute;
+  width: 9rem;
+  bottom: 3rem;
+  left: 2.4rem;
+  outline: none;
+}
+
+.slider{
+  width: 100%;
+  cursor: grab;
+  appearance: none;
+  outline: none;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  background-color: black;
+}
+
+.slider::-webkit-slider-thumb{
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: white;
+  outline: none;
+}
+
+.slider:active{
+  cursor: grabbing;
 }
