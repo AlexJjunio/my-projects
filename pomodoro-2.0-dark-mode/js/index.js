@@ -10,10 +10,6 @@ import {
   decreaseButton,
   displayMinutes,
   displaySeconds,
-  fireplaceSoundsButton,
-  rainSoundsButton,
-  forestSoundsButton,
-  coffeShopSoundsButton
 
 } from "./elements.js";
 
@@ -23,10 +19,7 @@ const controls = Controls({
   stopButton,
   increaseButton,
   decreaseButton,
-  fireplaceSoundsButton,
-  rainSoundsButton,
-  forestSoundsButton,
-  coffeShopSoundsButton
+
 })
 
 const timer = Timer({

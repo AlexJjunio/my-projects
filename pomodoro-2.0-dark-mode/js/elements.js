@@ -13,10 +13,10 @@ let displaySeconds = document.querySelector('.seconds')
 
 // sounds button
 
-let forestSoundsButton = document.querySelector('.forestSoundsButton')
-let rainSoundsButton = document.querySelector('.rainSoundsButton')
-let fireplaceSoundsButton = document.querySelector('.fireplaceSoundsButton')
-let coffeShopSoundsButton = document.querySelector('.coffeShopSoundsButton')
+const forestSoundsButton = document.querySelector('.forestSoundsButton')
+const rainSoundsButton = document.querySelector('.rainSoundsButton')
+const fireplaceSoundsButton = document.querySelector('.fireplaceSoundsButton')
+const coffeShopSoundsButton = document.querySelector('.coffeShopSoundsButton')
 
 export {
   playButton,

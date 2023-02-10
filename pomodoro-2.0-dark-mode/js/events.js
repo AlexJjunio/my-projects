@@ -4,17 +4,18 @@ import {
   stopButton,
   decreaseButton,
   increaseButton,
-  rainSoundsButton,
   forestSoundsButton,
-  coffeShopSoundsButton,
-  fireplaceSoundsButton
+  rainSoundsButton,
+  fireplaceSoundsButton,
+  coffeShopSoundsButton
+
 } from "./elements.js";
 
 import {
   rainSounds,
   forestSounds,
-  coffeShopSounds,
-  firePlaceSounds
+  firePlaceSounds,
+  coffeShopSounds
 } from "./sounds.js";
 
 export default function({timer,sound,controls}) {
@@ -47,6 +48,8 @@ export default function({timer,sound,controls}) {
     timer.increaseMinutes()
   })
 
+
+
 let isPlaying = false;
 var currentSounds = null;
 var sounds = [rainSounds,forestSounds,coffeShopSounds,firePlaceSounds];
@@ -58,7 +61,7 @@ for (var i = 0; i < buttons.length; i++) {
             if (isPlaying && currentSounds === sounds[i]) {
                 currentSounds.pause();
                 isPlaying = false;
-                // buttons[i].style.background = "";
+                buttons[i].style.background = "";
             } else {
                 if (isPlaying) {
                     currentSounds.pause();
@@ -66,7 +69,7 @@ for (var i = 0; i < buttons.length; i++) {
                 currentSounds = sounds[i]
                 currentSounds.play()
                 isPlaying = true;
-                // buttons[i].style.background = "#02799D";
+                buttons[i].style.background = "#02799D";
             }
         }
     }(i))
