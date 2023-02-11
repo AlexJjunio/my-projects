@@ -8,9 +8,9 @@ const firePlaceSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw
 
 export default function() {
 
-  const buttonPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true")
+  const buttonPressAudio = new Audio("https://github.com/AlexJjunio/my-projects/blob/main/pomodoro-2.0-dark-mode/sounds/audios_button-press.wav?raw=true")
   
-  const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
+  const kitchenTimer = new Audio("https://github.com/AlexJjunio/my-projects/blob/main/pomodoro-2.0-dark-mode/sounds/audios_kichen-timer%20(3).mp3?raw=true")
 
   function timeEnd() {
     kitchenTimer.play()

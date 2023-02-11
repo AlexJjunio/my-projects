@@ -11,14 +11,16 @@ export default function Timer({
   let minutes = Number(displayMinutes.textContent)
 
   function increaseMinutes() {
-    let newMinutes = Number(displayMinutes.textContent) + 1
-    updateMinutes(newMinutes)
-    updateDisplay(minutes, 0)
+    if(displayMinutes.textContent < 60) {
+      let newMinutes = Number(displayMinutes.textContent) + 1
+      updateMinutes(newMinutes)
+      updateDisplay(minutes, 0)
+    }
   }
 
   function decreaseMinutes() {
 
-    if(displaySeconds.textContent == 0) {
+    if(displaySeconds.textContent == 0 && displayMinutes.textContent > 0) {
       let newMinutes = Number(displayMinutes.textContent) - 1
       updateMinutes(newMinutes)
       updateDisplay(minutes, 0)

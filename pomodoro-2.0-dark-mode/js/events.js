@@ -10,7 +10,11 @@ import {
   coffeShopSoundsButton,
   sunButton,
   moonButton,
-  html
+  html,
+  firstSlider,
+  secondSlider,
+  thirdSlider,
+  fourthSlider
 
 } from "./elements.js";
 
@@ -77,10 +81,12 @@ export default function({timer,sound,controls}) {
 
   })
 
-rainSoundsButton.addEventListener('click', function() {
-  console.log('Erro:',rainSounds)
-})
+  // firstSlider.addEventListener('input', function() {
+  //   rainSounds.volume = 1;
+  // });
+  
 
+let sliders = [firstSlider, secondSlider, thirdSlider, fourthSlider]
 let isLight = true;
 let isPlaying = false;
 var currentSounds = null;
@@ -101,7 +107,6 @@ for (var i = 0; i < buttons.length; i++) {
                 currentSounds = sounds[i]
                 currentSounds.play()
                 isPlaying = true;
-
                 buttons.forEach(function(button) {
                   button.style.backgroundColor = "";                  
                 })

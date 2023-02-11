@@ -24,6 +24,14 @@ const sunButton = document.querySelector('.sun')
 const moonButton = document.querySelector('.moon')
 const html = document.querySelector('html')
 
+// sliders
+
+const firstSlider = document.querySelector('.first-slider')
+const secondSlider = document.querySelector('.second-slider')
+const thirdSlider = document.querySelector('.third-slider')
+const fourthSlider = document.querySelector('.fourth-slider')
+
+
 export {
   playButton,
   pauseButton,
@@ -38,5 +46,9 @@ export {
   coffeShopSoundsButton,
   sunButton,
   moonButton,
-  html
+  html,
+  firstSlider,
+  secondSlider,
+  thirdSlider,
+  fourthSlider
 }
