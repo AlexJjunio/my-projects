@@ -1,4 +1,4 @@
-const rainSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/rain.wav?raw=true")
+const rainSounds = new Audio("https://github.com/AlexJjunio/my-projects/blob/main/pomodoro-2.0-dark-mode/sounds/rain.wav?raw=true")
 
 const forestSounds = new Audio("https://github.com/AlexJjunio/my-projects/raw/main/pomodoro-2.0/sounds/florest.wav?raw=true")
 

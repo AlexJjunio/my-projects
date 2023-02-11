@@ -15,7 +15,7 @@ let displaySeconds = document.querySelector('.seconds')
 
 const forestSoundsButton = document.querySelector('.forestSoundsButton')
 const rainSoundsButton = document.querySelector('.rainSoundsButton')
-const fireplaceSoundsButton = document.querySelector('.fireplaceSoundsButton')
+const firePlaceSoundsButton = document.querySelector('.firePlaceSoundsButton')
 const coffeShopSoundsButton = document.querySelector('.coffeShopSoundsButton')
 
 // alternator
@@ -34,7 +34,7 @@ export {
   displaySeconds,
   forestSoundsButton,
   rainSoundsButton,
-  fireplaceSoundsButton,
+  firePlaceSoundsButton,
   coffeShopSoundsButton,
   sunButton,
   moonButton,

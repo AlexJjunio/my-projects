@@ -6,7 +6,7 @@ import {
   increaseButton,
   forestSoundsButton,
   rainSoundsButton,
-  fireplaceSoundsButton,
+  firePlaceSoundsButton,
   coffeShopSoundsButton,
   sunButton,
   moonButton,
@@ -76,13 +76,16 @@ export default function({timer,sound,controls}) {
     })
 
   })
-  
+
+rainSoundsButton.addEventListener('click', function() {
+  console.log('Erro:',rainSounds)
+})
+
 let isLight = true;
-let youClicked = true;
 let isPlaying = false;
 var currentSounds = null;
-var sounds = [rainSounds,forestSounds,coffeShopSounds,firePlaceSounds];
-var buttons = [rainSoundsButton, forestSoundsButton, coffeShopSoundsButton, fireplaceSoundsButton];
+var sounds = [rainSounds, forestSounds,coffeShopSounds,firePlaceSounds];
+var buttons = [rainSoundsButton, forestSoundsButton, coffeShopSoundsButton, firePlaceSoundsButton];
 
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(i) {
@@ -98,7 +101,7 @@ for (var i = 0; i < buttons.length; i++) {
                 currentSounds = sounds[i]
                 currentSounds.play()
                 isPlaying = true;
-                
+
                 buttons.forEach(function(button) {
                   button.style.backgroundColor = "";                  
                 })
@@ -108,7 +111,6 @@ for (var i = 0; i < buttons.length; i++) {
                 } else {
                   buttons[i].style.backgroundColor = "salmon";
                 }
-
             }
         }
     }(i))
