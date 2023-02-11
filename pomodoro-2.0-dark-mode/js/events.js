@@ -55,6 +55,13 @@ export default function({timer,sound,controls}) {
     controls.light()
     html.classList.remove("dark-mode")
     isLight = true
+
+    buttons.forEach(function(button) {
+      if (button.style.backgroundColor === "salmon") {
+        button.style.backgroundColor = "lightblue";
+      }
+    })
+
   })
 
   moonButton.addEventListener('click', function() {
@@ -63,14 +70,15 @@ export default function({timer,sound,controls}) {
     isLight = false
 
     buttons.forEach(function(button) {
-      if (button.style.backgroundColor === blue) {
-        button.style.backgroundColor = red;
-      } 
+      if (button.style.backgroundColor === "lightblue") {
+        button.style.backgroundColor = "salmon";
+      }
     })
 
   })
-
+  
 let isLight = true;
+let youClicked = true;
 let isPlaying = false;
 var currentSounds = null;
 var sounds = [rainSounds,forestSounds,coffeShopSounds,firePlaceSounds];
@@ -80,9 +88,9 @@ for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(i) {
         return function() {
           if (isPlaying && currentSounds === sounds[i]) {
-            currentSounds.pause();
+                currentSounds.pause();
                 isPlaying = false;
-                buttons[i].style.background = "";
+                buttons[i].style.backgroundColor = "";
             } else {
                 if (isPlaying) {
                     currentSounds.pause();
@@ -90,12 +98,17 @@ for (var i = 0; i < buttons.length; i++) {
                 currentSounds = sounds[i]
                 currentSounds.play()
                 isPlaying = true;
+                
+                buttons.forEach(function(button) {
+                  button.style.backgroundColor = "";                  
+                })
 
                 if(isLight) {
-                  buttons[i].style.background = blue;
+                  buttons[i].style.backgroundColor = "lightblue";
                 } else {
-                  buttons[i].style.background = red;
+                  buttons[i].style.backgroundColor = "salmon";
                 }
+
             }
         }
     }(i))

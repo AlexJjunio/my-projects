@@ -11,7 +11,7 @@
   --body-bg: #222;
   --body-color: #dee2e6;
   --sounds-button: #899095;
-  --sounds-button-hover: #ec5840;
+  --sounds-button-hover: salmon;
   --path-fill: #899095;
   --path-fill-sounds: #dee2e6;
 }
@@ -21,13 +21,14 @@
   --body-bg: white;
   --body-color: #222;
   --sounds-button: #E1E1E6;
-  --sounds-button-hover: #02799D;
+  --sounds-button-hover: lightblue;
   --path-fill: #222;
   --path-fill-sounds: black;
 }
 
 .controls svg path {
   fill: var(--path-fill);
+  color: salmon;
 }
 
 .alternator svg path {
