@@ -26,10 +26,10 @@ const html = document.querySelector('html')
 
 // sliders
 
-const firstSlider = document.querySelector('.first-slider')
-const secondSlider = document.querySelector('.second-slider')
-const thirdSlider = document.querySelector('.third-slider')
-const fourthSlider = document.querySelector('.fourth-slider')
+const firstSlider = document.querySelector('#first-slider')
+const secondSlider = document.querySelector('#second-slider')
+const thirdSlider = document.querySelector('#third-slider')
+const fourthSlider = document.querySelector('#fourth-slider')
 
 
 export {

@@ -81,11 +81,6 @@ export default function({timer,sound,controls}) {
 
   })
 
-  // firstSlider.addEventListener('input', function() {
-  //   rainSounds.volume = 1;
-  // });
-  
-
 let sliders = [firstSlider, secondSlider, thirdSlider, fourthSlider]
 let isLight = true;
 let isPlaying = false;
@@ -95,15 +90,21 @@ var buttons = [rainSoundsButton, forestSoundsButton, coffeShopSoundsButton, fire
 
 for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function(i) {
-        return function() {
-          if (isPlaying && currentSounds === sounds[i]) {
+      return function() {
+        if (isPlaying && currentSounds === sounds[i]) {
                 currentSounds.pause();
                 isPlaying = false;
                 buttons[i].style.backgroundColor = "";
-            } else {
+              } else {
                 if (isPlaying) {
-                    currentSounds.pause();
+                  currentSounds.pause();
                 }
+                
+                sliders[i].addEventListener('input', function() {
+                  let { value } = sliders[i]
+                  sounds[i].volume = value / 100
+                })
+
                 currentSounds = sounds[i]
                 currentSounds.play()
                 isPlaying = true;
@@ -116,7 +117,9 @@ for (var i = 0; i < buttons.length; i++) {
                 } else {
                   buttons[i].style.backgroundColor = "salmon";
                 }
-            }
+
+                
+              }
         }
     }(i))
 }
